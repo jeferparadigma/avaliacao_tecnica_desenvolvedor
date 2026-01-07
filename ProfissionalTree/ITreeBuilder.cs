@@ -1,4 +1,4 @@
-namespace ProfessionalTree;
+namespace ProfissionalTree;
 
 public interface ITreeBuilder
 {
