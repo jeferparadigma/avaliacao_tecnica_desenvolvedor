@@ -1,42 +1,63 @@
-using System;
-using System.Linq;
+namespace ProfissionalTree.Services;
 
-namespace ProfissionalTree;
+using ProfissionalTree.Interfaces;
+using ProfissionalTree.Models;
 
+/// <summary>
+/// Implementa a construção de uma árvore binária a partir de um array.
+/// Princípio: Single Responsibility (SOLID S)
+/// </summary>
 public class BinaryTreeBuilder : ITreeBuilder
 {
-    public Node Build(int[] values)
+    /// <summary>
+    /// Constrói árvore usando representação em array (índice 0 = raiz).
+    /// </summary>
+    public TreeNode? Build(int[] values)
     {
         if (values == null || values.Length == 0)
-            throw new ArgumentException("Array não pode ser vazio.");
+            return null;
 
-        int maxValue = values.Max();
-        int rootIndex = Array.IndexOf(values, maxValue);
-
-        var root = new Node(maxValue);
-
-        var leftBranch = values.Take(rootIndex).OrderByDescending(x => x).ToArray();
-        var rightBranch = values.Skip(rootIndex + 1).OrderByDescending(x => x).ToArray();
-
-        root.Left = BuildBranch(leftBranch);
-        root.Right = BuildBranch(rightBranch);
-
-        return root;
+        return BuildRecursive(values, 0);
     }
 
-    private Node? BuildBranch(int[] branchValues)
+    private TreeNode? BuildRecursive(int[] values, int index)
     {
-        if (!branchValues.Any()) return null;
+    if (values == null || values.Length == 0)
+            return null;
 
-        var branchRoot = new Node(branchValues.First());
-        var current = branchRoot;
+        int max = values.Max();
+        int idx = Array.IndexOf(values, max);
 
-        foreach (var value in branchValues.Skip(1))
+        var root = new TreeNode(max);
+
+        var leftVals = values.Take(idx).OrderByDescending(x => x).ToArray();
+        var rightVals = values.Skip(idx + 1).OrderByDescending(x => x).ToArray();
+
+        // construir cadeia à esquerda usando Left
+        TreeNode? prev = root;
+        if (leftVals.Length > 0)
         {
-            current.Right = new Node(value);
-            current = current.Right;
+            prev.Left = new TreeNode(leftVals[0]);
+            prev = prev.Left;
+            for (int i = 1; i < leftVals.Length; i++)
+            {
+                prev.Left = new TreeNode(leftVals[i]);
+                prev = prev.Left;
+            }
         }
 
-        return branchRoot;
-    }
+        // construir cadeia à direita usando Right
+        prev = root;
+        if (rightVals.Length > 0)
+        {
+            prev.Right = new TreeNode(rightVals[0]);
+            prev = prev.Right;
+            for (int i = 1; i < rightVals.Length; i++)
+            {
+                prev.Right = new TreeNode(rightVals[i]);
+                prev = prev.Right;
+            }
+        }
+
+        return root;    }
 }

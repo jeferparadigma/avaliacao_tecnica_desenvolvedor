@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4trynvXxPDc=",
+  "dgSpecHash": "KUoEU0dOnbk=",
   "success": true,
   "projectFilePath": "F:\\Desenvolvimento\\paradigma\\ProfissionalTree\\ProfissionalTree.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jefsi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0\\microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+    "C:\\Users\\jefsi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

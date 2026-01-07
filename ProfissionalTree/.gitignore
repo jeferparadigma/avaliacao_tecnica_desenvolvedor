@@ -1,0 +1,100 @@
+# Compilação
+bin/
+obj/
+out/
+
+
+# Logs
+*.log
+
+# Usuário / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Configurações locais
+*.swp
+*.tmp
+*.db
+*.db-shm
+*.db-wal
+
+# Build do Visual Studio
+*.pdb
+*.cache
+*.ilk
+*.aps
+*.ncb
+*.res
+*.tlb
+*.tlh
+*.bak
+*.backup
+*.log
+*.vspscc
+*_i.c
+*_p.c
+*_h.h
+*.lib
+*.sbr
+*.dll
+*.exe
+
+# Testes
+TestResults/
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+# Pacotes NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+project.lock.json
+
+# Publicações
+publish/
+*.publish.xml
+
+# Ferramentas
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+
+# Configurações do sistema
+Thumbs.db
+Desktop.ini
+
+# Cache do ASP.NET
+App_Data/
+
+
+# Ignorar resultados de testes xUnit / NUnit / MSTest
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+
+# Relatórios de cobertura (Coverlet, ReportGenerator, etc.)
+coverage/
+*.coverageinfo
+*.cov
+*.xml
+*.json
+
+# Arquivos temporários de execução
+*.tmp
+*.temp
