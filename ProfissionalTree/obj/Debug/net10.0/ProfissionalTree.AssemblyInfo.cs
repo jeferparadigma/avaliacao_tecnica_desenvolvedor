@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProfissionalTree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac8ce1d006dda76741583e9909c8c142a5421bac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fae591e26b412504d4bbd4b8b2b7ddabf353d848")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProfissionalTree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProfissionalTree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
